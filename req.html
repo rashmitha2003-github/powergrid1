@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Request Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Service Request Application</h1>
+        <form action="/submit-maintenance-request" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="name">Enter Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Enter Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Enter Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+			
+			<div class="form-group">
+                <label for="phone">Enter your Location/Landmark:</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+			
+			<div class="form-group">
+                <label for="phone">Enter your Substation No::</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+			
+			
+			<p><u>Request Type:</u></p>
+			<div class="form-group">
+                <label> 
+				<input type="radio" name="option" value="option1" required><i>
+               Installation service
+            </label>
+      
+	
+                <label>
+				<input type="radio" name="option" value="option1" required>
+                Monthly maintenance and Service
+            </label>
+       
+                <label> 
+				<input type="radio" name="option" value="option1" required>
+                Mechanical Service
+            </label>
+			
+			<label> 
+				<input type="radio" name="option" value="option1" required>
+                Fault In Transmission Line
+            </label>
+			
+			
+			
+			<label> 
+				<input type="radio" name="option" value="option1" required>
+               Complaint Regarding Electric Meter
+            </label>
+			
+       
+                <label> 
+				<input type="radio" name="option" value="option1" required>
+                Other services</i>
+            </label>
+        </div>
+		<br><br>
+		
+		<div class="form-group">
+                <label for="description">Description of the Issue:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+            </div>
+				
+				
+				
+            <div class="form-group">
+                <label for="attachment">Attach File (optional):</label>
+                <input type="file" id="attachment" name="attachment">
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit Request</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
